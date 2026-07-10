@@ -1,0 +1,7 @@
+# Dependency build scripts must be explicitly allowed under pnpm.
+# esbuild/workerd ship platform binaries (astro/wrangler), sharp compiles
+# its native image codecs — all three are required for dev and build.
+allowBuilds:
+  esbuild: true
+  sharp: true
+  workerd: true

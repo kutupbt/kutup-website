@@ -6,7 +6,7 @@ name = "kutup-website"
 compatibility_date = "2025-06-09"
 
 [build]
-command = "npm run build"
+command = "pnpm run build"
 
 [assets]
 directory = "./dist"

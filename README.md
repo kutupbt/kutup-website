@@ -19,16 +19,16 @@ OS-aware download, instance-directory filter); everything else is static HTML.
 ## Develop
 
 ```sh
-npm install
-npm run dev      # http://localhost:4321
+pnpm install
+pnpm run dev      # http://localhost:4321
 ```
 
 ## Build & check
 
 ```sh
-npm run build    # static output -> dist/
-npm run check    # astro check (TypeScript)
-npm run preview  # serve the production build locally
+pnpm run build    # static output -> dist/
+pnpm run check    # astro check (TypeScript)
+pnpm run preview  # serve the production build locally
 ```
 
 ## Content
@@ -51,7 +51,7 @@ Do not recolor or modify them. See the main repo's `TRADEMARK.md`.
 
 **Recommended — connect the Git repo** in the Cloudflare dashboard:
 
-- Build command: `npm run build`
+- Build command: `pnpm run build`
 - Build output directory: `dist`
 - Then attach the `kutup.dev` custom domain, and configure the apex/`www`
   canonical redirect via the dashboard.
@@ -59,7 +59,7 @@ Do not recolor or modify them. See the main repo's `TRADEMARK.md`.
 **Or deploy from the CLI:**
 
 ```sh
-npm run deploy   # astro build && wrangler pages deploy dist
+pnpm run deploy   # astro build && wrangler pages deploy dist
 ```
 
 Headers and redirects ship with the build:
