@@ -27,6 +27,7 @@ const sectionMeta = [
   { id: 'whiteboards', img: '/screenshots/04-whiteboard.png' },
   { id: 'versions', img: '/screenshots/05-version-history.png' },
   { id: 'keys', img: '/screenshots/06-settings.png' },
+  { id: 'chat', img: '/screenshots/07-chat.png' },
 ]
 ---
 
@@ -95,7 +96,7 @@ const sectionMeta = [
               lang="sh"
               copyLabel={t.copy.label}
               copiedLabel={t.copy.copied}
-              code={`git clone https://github.com/kutupbulut/kutup.git
+code={`git clone https://github.com/kutupbt/kutup.git
 cd kutup
 cargo build --release -p kutup-cli
 install -m755 target/release/kutup ~/.local/bin/kutup`}
@@ -117,7 +118,7 @@ kutup login --server https://your.kutup.host \\
 kutup ls
 kutup upload ./big-dataset.tar.gz <folder-id>
 kutup sync ./local-folder <folder-id> --watch
-kutup versions restore <file-id> <version-id>`}
+kutup versions list <file-id>`}
             />
           </div>
         </div>

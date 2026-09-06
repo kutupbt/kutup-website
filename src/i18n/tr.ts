@@ -7,9 +7,9 @@ import type { Dictionary } from './index'
 const tr: Dictionary = {
   site: {
     tagline:
-      'Uçtan uca şifreli, kendi sunucunuzda barındırdığınız sürücü — notlar, ofis belgeleri ve beyaz tahtalar için gerçek zamanlı iş birliğiyle.',
+      'Uçtan uca şifreli, kendi sunucunuzda barındırdığınız Drive ve federe Chat — gerçek zamanlı iş birliğiyle.',
     description:
-      'Kutup; kendi donanımınızda çalıştırdığınız, gizlilik öncelikli, uçtan uca şifreli bir dosya depolama ve canlı iş birliği platformudur. Sunucu yalnızca şifreli metin görür.',
+      'Kutup; kendi donanımınızda çalıştırdığınız, gizlilik öncelikli dosya depolama, iş birliği ve mesajlaşma platformudur. Korunan içerik sunucuya ulaşmadan önce cihazınızda şifrelenir.',
   },
 
   nav: {
@@ -28,7 +28,7 @@ const tr: Dictionary = {
 
   footer: {
     blurb:
-      'Uçtan uca şifreli, kendi sunucunuzda barındırdığınız sürücü — notlar, ofis belgeleri ve beyaz tahtalar için gerçek zamanlı iş birliğiyle. Sunucu yalnızca şifreli metin görür.',
+      'Uçtan uca şifreli, kendi sunucunuzda barındırdığınız Drive ve federe Chat — gerçek zamanlı iş birliğiyle. Korunan içerik sunucuda şifreli kalır.',
     product: 'Ürün',
     resources: 'Kaynaklar',
     documentation: 'Belgeler',
@@ -42,10 +42,9 @@ const tr: Dictionary = {
 
   home: {
     hero: {
-      badge: 'Uçtan uca şifreli · kendi sunucunuzda · gerçek zamanlı iş birliği',
-      title:
-        'Uçtan uca şifreli <span class="text-ice">bulut platformu</span>',
-      sub: 'Kendiniz çalıştırdığınız uçtan uca şifreli bir sürücü. Dosyalar, notlar, ofis belgeleri ve beyaz tahtalar — her şey sayfadan ayrılmadan önce tarayıcınızda şifrelenir.',
+      badge: 'Uçtan uca şifreli · kendi sunucunuzda · federe',
+      title: 'Size ait özel <span class="text-ice">çalışma alanı</span>',
+      sub: 'Dosyalar, ortak düzenlenen belgeler ve federe mesajlar tek bir duyarlı web uygulamasında. Korunan içerik sunucunuza ulaşmadan önce cihazınızda şifrelenir.',
       ctaSelfHost: 'Kendi sunucunda kur',
       ctaDownload: 'Uygulamaları indir',
       screenshotAlt: 'Kutup Drive arayüzü',
@@ -61,14 +60,14 @@ const tr: Dictionary = {
       },
       {
         title: 'Çalıştırması ve federe etmesi sizde',
-        body: 'Tek bir Docker Compose yığını. Klasörleri Kutup sunucuları arasında, hiçbir arka uç düz metni görmeden paylaşın.',
+        body: 'Tek bir Docker Compose yığını. Klasörleri paylaşın ve Kutup sunucuları arasında, hiçbir arka uç korunan düz metni görmeden mesajlaşın.',
       },
     ],
     highlights: {
       eyebrow: 'İçinde neler var',
       title: 'Her şey için tek bir şifreli çalışma alanı',
       subtitle:
-        'Dosyalar, notlar, kod, tablolar, sunumlar ve beyaz tahtalar — hepsi aynı sarsılmaz şifreleme sınırının altında.',
+        'Dosyalar, mesajlar, notlar, kod, tablolar, sunumlar ve beyaz tahtalar — açık, koyu ve sistem temalı tek bir duyarlı web uygulamasında.',
       cta: 'Tüm özellikleri keşfet',
       items: [
         {
@@ -99,7 +98,12 @@ const tr: Dictionary = {
         {
           title: 'Anahtarların sahibi sizsiniz',
           alt: 'Ayarlar — cihazlar ve görünürlük rengi',
-          body: 'İptal edebileceğiniz cihaz başına anahtarlar, 24 kelimelik kurtarma ifadesi ve isteğe bağlı 2FA. Hiçbir gizli bilgi sunucuya ulaşmaz.',
+          body: 'İptal edebileceğiniz cihaz başına anahtarlar, düzenlenebilir Chat kurulum adları, 24 kelimelik kurtarma ifadesi ve isteğe bağlı 2FA.',
+        },
+        {
+          title: 'Kurtarılabilen federe Chat',
+          alt: 'Kutup Mesajlar konuşma listesi ve şifreli sohbet dizisi',
+          body: 'Doğrudan ve özel grup mesajları, yanıtlar, tepkiler, düzenlemeler, kaybolan içerik ve tembel yüklenen şifreli medya. Sürekli hesap içi yedek, tarayıcı kaybından sonra korunan geçmişi geri getirir.',
         },
       ],
     },
@@ -132,7 +136,7 @@ const tr: Dictionary = {
       lead: 'Açık kaynak projelerden ilhamla inşa edildi:',
     },
     cta: {
-      title: 'Kendi şifreli Drive’ınızı bugün çalıştırın',
+      title: 'Kendi şifreli çalışma alanınızı bugün çalıştırın',
       body: 'Depoyu klonlayın, birkaç gizli değeri doldurun ve <code>docker compose up</code>. Verilerinizi okuyabilen tek kişi sizsiniz.',
       getStarted: 'Başlayın',
       viewSource: 'Kaynağı görüntüle ↗',
@@ -143,12 +147,12 @@ const tr: Dictionary = {
     meta: {
       title: 'Özellikler',
       description:
-        'Drive, canlı notlar ve kod, OnlyOffice belgeleri, Excalidraw beyaz tahtaları, sürüm geçmişi, federasyon ve tamamen E2EE bir CLI — Kutup’un yaptığı her şey.',
+        'Şifreli Drive, federe Chat, canlı iş birliği, korunan geçmiş kurtarma ve tamamen E2EE bir CLI — Kutup’un yaptığı her şey.',
     },
     hero: {
       eyebrow: 'Özellikler',
       title: 'Her şey şifreli, hiçbir şeyden ödün yok',
-      sub: 'Kutup, sıfır bilgili bir sunucuyu her dosya türünde gerçek zamanlı iş birliğiyle bir araya getirir. İşte her parçanın nasıl çalıştığı.',
+      sub: 'Kutup, istemci tarafı şifrelemeyi gerçek zamanlı iş birliği ve federe mesajlaşmayla bir araya getirir. İşte her parçanın nasıl çalıştığı.',
     },
     sections: [
       {
@@ -213,13 +217,23 @@ const tr: Dictionary = {
           'İsteğe bağlı TOTP 2FA ve düzenleyiciler ile sekmeler arasında sizi izleyen bir görünürlük rengi.',
         ],
       },
+      {
+        eyebrow: 'Mesajlar',
+        title: 'Federe doğrudan ve özel grup Chat',
+        alt: 'Kutup Mesajlar çalışma alanı',
+        points: [
+          'Doğrudan konuşmalar ve Kendime Not libsignal, özel gruplar RFC 9420 OpenMLS kullanır.',
+          'Yanıtlar, tepkiler, düzenlemeler, silmeler, alındılar, kaybolan mesajlar, yerel arama, şifreli ekler, önizlemeler ve sesli notlar desteklenir.',
+          'Her zaman açık hesap içi E2EE yedek, protokol oturumlarını veya bekleyen gönderimleri geri yüklemeden doğrulanmış görüntü geçmişini ve uygun medyayı tüm tarayıcı verisi kaybedildikten sonra kurtarır.',
+        ],
+      },
     ],
     federation: {
       eyebrow: 'Federasyon',
       title: 'Güveni paylaşmadan sunucular arası paylaşın',
       subtitle:
-        'Farklı bir Kutup sunucusundaki birini bir klasöre davet edin. İki arka uç da şifreli metni yönlendirir; hiçbiri düz metni asla görmez.',
-      body: 'Federasyon davet bağlantıları, her sunucunun herkese açık <code>SERVER_URL</code> değerinden oluşturulur. Sunucular arası iş birliği, yerel düzenlemeyle aynı çerçeve başına AEAD zarfını ve Ed25519 imzalarını kullanır — ikinci bir sunucu devreye girdi diye şifreleme sınırı yer değiştirmez.',
+        'Drive klasörlerini paylaşın ve Kutup sunucuları arasında Chat mesajları gönderin. İki arka uç da şifreli metni yönlendirir; hiçbiri korunan düz metni almaz.',
+      body: 'Drive ve Chat tek bir kimliği doğrulanmış federasyon kimliğini, eş politikasını, yeniden deneme hattını ve denetim yüzeyini paylaşır. Özelliğe özel şifreli yükler ayrı kalır; ikinci bir sunucu devreye girdiğinde şifreleme sınırı yer değiştirmez.',
     },
     cli: {
       eyebrow: 'Komut satırı',
@@ -228,7 +242,7 @@ const tr: Dictionary = {
         'kutup; register, login, ls, upload, download, sync, share, versions, devices ve 2FA için Rust ile yazılmış bir CLI’dır — tamamı uçtan uca şifreli. Sunucu yalnızca şifreli metin görür.',
       install: 'Kaynaktan derleme (Rust ≥ 1.91)',
       installNote:
-        'Etiketli sürüm ikilileri (Linux / macOS / Windows; amd64 + arm64) GitHub Releases’te yayımlanır.',
+        'Henüz herkese açık ikili sürüm yoktur. Etiketli CLI sürümleri Linux x86-64/ARM64, macOS Intel/Apple Silicon ve Windows x86-64 için yapılandırılmıştır.',
       workflows: 'Yaygın iş akışları',
       standoutTitle: 'Öne çıkan: > 2 GB yüklemeler',
       standoutBody:
@@ -244,34 +258,34 @@ const tr: Dictionary = {
     meta: {
       title: 'İndir',
       description:
-        'Kutup’u masaüstü (macOS, Windows, Linux), mobil (iOS, Android) veya komut satırı için edinin. Tüm istemciler uçtan uca şifrelidir.',
+        'Kutup’u web’de kullanın veya ön sürüm masaüstü kabuğunu ve CLI’yı kaynaktan derleyin. Yerel iOS ve Android uygulamaları geliştirme aşamasındadır.',
     },
     hero: {
       eyebrow: 'İndir',
-      title: 'Kutup’u her cihazınıza edinin',
-      sub: 'Web, masaüstü, mobil ve eksiksiz bir CLI — her istemci, ağa tek bayt çıkmadan önce uçtan uca şifreler. Her birini kendi Kutup sunucunuza yönlendirirsiniz.',
-      badge: 'Ön sürüm — ikili dosyalar GitHub Releases’te yayımlanır',
+      title: 'Kutup’u nasıl kullanacağınızı seçin',
+      sub: 'Bugün eksiksiz ürün yüzeyi duyarlı web uygulamasıdır. Masaüstü ve CLI kaynakları hazırdır; özel yerel mobil uygulamalar sürüme hazır değildir.',
+      badge: 'Üretim öncesi — henüz herkese açık ikili sürüm yok',
     },
     desktop: {
       eyebrow: 'Masaüstü uygulaması',
       titleKnown: '{os} için önerilen',
       titleUnknown: 'Masaüstü uygulamasını indirin',
-      body: 'Tauri 2 ile yerel kabuk — macOS, Windows ve Linux (amd64 & arm64); otomatik güncellemeler ve işletim sistemi anahtar zinciri desteğiyle. Derlemeler GitHub Releases’te yayımlanır.',
+      body: 'Uygulanmış Tauri 2 kabuğu macOS, Windows ve Linux’u hedefler ve oturum materyalini işletim sistemi anahtar zincirinde saklar. İmzalama, paketleme ve ilk sürüm kabulü açıkken kaynaktan derleyin.',
       downloadFor: '{os} için indir',
       goToReleases: 'Releases’e git',
       preRelease:
-        'Ön sürüm — masaüstü v1, uygulama içi ofis belgesi düzenleme olmadan gelir (ofis dosyalarını tarayıcı uygulamasında açın). Derlemeler henüz kod imzalı değil; macOS Gatekeeper / Windows SmartScreen ilk açılışta uyarı gösterebilir.',
+        'Ön sürüm kaynak derlemesi — henüz herkese açık masaüstü sürümü yoktur. Ofis belgeleri web uygulamasında açılır ve güncel yerel derlemeler imzasızdır.',
     },
     mobile: {
       eyebrow: 'Mobil',
       title: 'iOS ve Android',
-      body: 'Tauri ile yerel mobil derlemeler. iOS, oturumunuzu anahtar zincirinde saklar. Dağıtım hazırlık aşamasında — durumu GitHub Releases’ten takip edin.',
-      cta: 'Releases’e göz at ↗',
+      body: 'Özel yerel iOS ve Android uygulamaları ayrı depolarda etkin olarak geliştirilmektedir. Kuruluma veya üretim kullanımına hazır değildir; korunan Tauri mobil hedefleri deneyseldir.',
+      cta: 'Geliştirme durumunu görüntüle ↗',
     },
     web: {
       eyebrow: 'Web',
       title: 'Tarayıcıda kullanın',
-      body: 'Ofis belgesi düzenleme dahil eksiksiz web uygulaması, kendin barındırılan her kurulumla birlikte gelir. Kendi sunucunuzu ayağa kaldırın ve modern herhangi bir tarayıcıda açın.',
+      body: 'Drive, iş birliği, ofis düzenleme, federe Chat ve otomatik korunan geçmiş kurtarma dahil eksiksiz duyarlı uygulama, kendin barındırılan her kurulumla gelir.',
       cta: 'Kendin barındırma rehberi',
     },
     cli: {
@@ -281,7 +295,7 @@ const tr: Dictionary = {
         'Kabuğunuzdan uçtan uca şifreli dosya işlemleri — tarayıcının kaldıramadığı çok GB’lik yüklemeler dahil.',
       fromSource: 'Kaynaktan derleme (Rust ≥ 1.91)',
       binaryNote:
-        'İkili dosya mı tercih edersiniz? Linux / macOS / Windows (amd64 + arm64) için etiketli derlemeler <a href="{releases}" target="_blank" rel="noopener noreferrer">GitHub Releases’te ↗</a>.',
+        'Henüz herkese açık ikili dosya yoktur. Yapılandırılmış sürüm matrisi, ilk incelenmiş etiketten sonra Linux x86-64/ARM64, macOS Intel/Apple Silicon ve Windows x86-64 derlemelerini <a href="{releases}" target="_blank" rel="noopener noreferrer">GitHub Releases’e ↗</a> yayımlayacaktır.',
     },
   },
 
@@ -313,7 +327,7 @@ const tr: Dictionary = {
         envIntro:
           '<code>.env</code> dosyasını düzenleyin ve her değeri güçlü gizli değerlerle doldurun:',
         s3Note:
-          '<code>seaweedfs-s3.json</code> içindeki S3 gizli anahtarı <code>S3_SECRET_KEY</code> ile eşleşmelidir.',
+          'Compose, S3 kimlik bilgilerini SeaweedFS ve arka uca aktarır; düzenlenecek ikinci bir kimlik bilgisi dosyası yoktur.',
       },
       start: {
         title: '2. Yığını başlatın',
@@ -329,7 +343,7 @@ const tr: Dictionary = {
       tls: {
         title: '4. TLS ekleyin',
         intro:
-          'Paketle gelen Nginx 80 numaralı portu dinler. Certbot ile bir sertifika alın, <code>fullchain.pem</code> ve <code>privkey.pem</code> dosyalarını <code>nginx/certs/</code> dizinine koyun, bir 443 sunucu bloğu ekleyin ve yeniden yükleyin:',
+          'Paketle gelen Nginx zaten TLS gerektirir. Bir sertifika alın, <code>fullchain.pem</code> ve <code>privkey.pem</code> dosyalarını <code>nginx/certs/</code> dizinine koyun ve Nginx’i yeniden başlatın veya yükleyin:',
       },
     },
     operating: {
@@ -349,11 +363,11 @@ const tr: Dictionary = {
         },
         {
           title: 'Sıkılaştırma',
-          body: 'Tüm <code>.env</code> varsayılanlarını değiştirin, yalnızca 80/443’ü dışarı açın ve <code>JWT_SECRET</code> değerini <code>openssl rand -hex 64</code> ile üretin. Bootstrap hesabı korumalı bir acil durum (break-glass) yöneticisidir — ona güçlü bir şifre verin.',
+          body: 'Tüm gizli değerleri değiştirin, yalnızca herkese açık TLS ucunu dışarı açın ve <code>JWT_SECRET</code> değerini <code>openssl rand -hex 64</code> ile üretin. Arka ucu Nginx dışında erişilemez tutun ve acil durum yöneticisini koruyun.',
         },
       ],
       docsNote:
-        'OnlyOffice kurulumu, yaşam döngüsü/sürümleme yapılandırması, federasyon ve tam başvuru kaynağı için <a href="{docs}" target="_blank" rel="noopener noreferrer">belgelere ↗</a> bakın.',
+        'Ofis düzenleme, DocumentServer veya elle kurulum olmadan varsayılan Compose derlemesinde çalışır. Kalıcı SeaweedFS metadatası, saklama, kotalar, federasyon ve yedekleme/geri yükleme gereksinimleri için <a href="{docs}" target="_blank" rel="noopener noreferrer">belgelere ↗</a> bakın.',
     },
     cta: {
       title: 'Kutup’u zaten mi çalıştırıyorsunuz?',
@@ -372,7 +386,7 @@ const tr: Dictionary = {
     hero: {
       eyebrow: 'Genel sunucular',
       title: 'Katılacağınız bir Kutup sunucusu bulun',
-      sub: 'Kutup uçtan uca şifreli olduğu için, sizin işletmediğiniz bir sunucu bile dosyalarınızı okuyamaz. Topluluk tarafından işletilen bir sunucu seçin ya da tam kontrol için kendi sunucunuzu çalıştırın.',
+      sub: 'Kutup korunan içeriği cihazınızda şifrelediği için, sizin işletmediğiniz bir sunucu bile dosyalarınızı veya mesajlarınızı okuyamaz. Topluluk tarafından işletilen bir sunucu seçin ya da tam kontrol için kendiniz çalıştırın.',
     },
     trust: {
       title: 'Güven üzerine bir not',

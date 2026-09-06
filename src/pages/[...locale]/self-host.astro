@@ -25,10 +25,13 @@ POSTGRES_PASSWORD=<strong-random-password>
 # JWT secret — generate with: openssl rand -hex 64
 JWT_SECRET=<64-byte-hex-string>
 
-# SeaweedFS S3 credentials — must match seaweedfs-s3.json
+# SeaweedFS S3 credentials — Compose injects them into every service
 S3_ACCESS_KEY=kutup
 S3_SECRET_KEY=<strong-random-secret>
 S3_BUCKET=kutup-files
+
+# Stable account/federation domain — set before creating accounts
+CHAT_SERVER_NAME=kutup.example.com
 
 # Public URL — used to build federation invite links
 SERVER_URL=https://kutup.example.com
@@ -82,7 +85,7 @@ ADMIN_ACCOUNT=admin@example.com:admin:<strong-admin-password>`
             lang="sh"
             copyLabel={t.copy.label}
             copiedLabel={t.copy.copied}
-            code={`git clone https://github.com/kutupbulut/kutup.git
+            code={`git clone https://github.com/kutupbt/kutup.git
 cd kutup
 cp .env.example .env`}
           />
@@ -98,7 +101,7 @@ cp .env.example .env`}
         <h3 class="text-xl font-semibold text-fg">{t.selfHost.steps.start.title}</h3>
         <p class="mt-2 text-muted">{t.selfHost.steps.start.intro}</p>
         <div class="mt-4">
-          <CodeBlock lang="sh" code="docker compose up -d --build" copyLabel={t.copy.label} copiedLabel={t.copy.copied} />
+          <CodeBlock lang="sh" code="docker compose up -d --build --wait" copyLabel={t.copy.label} copiedLabel={t.copy.copied} />
         </div>
       </div>
 

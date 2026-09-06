@@ -6,9 +6,9 @@
 const en = {
   site: {
     tagline:
-      'End-to-end encrypted, self-hosted drive — with real-time collab for notes, office docs, and whiteboards.',
+      'End-to-end encrypted, self-hosted Drive and federated Chat — with real-time collaboration.',
     description:
-      'Kutup is a privacy-first, end-to-end encrypted file storage and live-collaboration platform you run on your own hardware. The server only ever sees ciphertext.',
+      'Kutup is a privacy-first file storage, collaboration, and messaging platform you run on your own hardware. Protected content is encrypted on your device before it reaches a server.',
   },
 
   nav: {
@@ -27,7 +27,7 @@ const en = {
 
   footer: {
     blurb:
-      'End-to-end encrypted, self-hosted drive — with real-time collab for notes, office docs, and whiteboards. The server only ever sees ciphertext.',
+      'End-to-end encrypted, self-hosted Drive and federated Chat — with real-time collaboration. Protected content stays ciphertext on the server.',
     product: 'Product',
     resources: 'Resources',
     documentation: 'Documentation',
@@ -43,10 +43,10 @@ const en = {
 
   home: {
     hero: {
-      badge: 'End-to-end encrypted · self-hosted · real-time collab',
+      badge: 'End-to-end encrypted · self-hosted · federated',
       // html: accent span around the highlighted phrase
-      title: 'The end-to-end encrypted <span class="text-ice">Drive</span>',
-      sub: 'An end-to-end encrypted drive you run yourself. Files, notes, office docs, and whiteboards — everything is encrypted in your browser before it leaves the page.',
+      title: 'Your private <span class="text-ice">workspace</span>',
+      sub: 'Files, collaborative documents, and federated messages in one responsive web app. Protected content is encrypted on your device before it reaches your server.',
       ctaSelfHost: 'Self-host Kutup',
       ctaDownload: 'Download apps',
       screenshotAlt: 'Kutup Drive interface',
@@ -62,14 +62,14 @@ const en = {
       },
       {
         title: 'Yours to run & federate',
-        body: 'One Docker Compose stack. Share folders across Kutup servers without either backend seeing plaintext.',
+        body: 'One Docker Compose stack. Share folders and exchange messages across Kutup servers without either backend seeing protected plaintext.',
       },
     ],
     highlights: {
       eyebrow: 'What’s inside',
       title: 'One encrypted workspace for everything',
       subtitle:
-        'Files, notes, code, spreadsheets, slides, and whiteboards — all under the same hard-baked encryption boundary.',
+        'Files, messages, notes, code, spreadsheets, slides, and whiteboards — one responsive web app with light, dark, and system themes.',
       cta: 'Explore all features',
       items: [
         {
@@ -100,7 +100,12 @@ const en = {
         {
           title: 'You own your keys',
           alt: 'Settings — devices and presence color',
-          body: 'Per-device keys you can revoke, a 24-word recovery phrase, and optional 2FA. Nothing secret ever reaches the server.',
+          body: 'Per-device keys you can revoke, editable Chat installation labels, a 24-word recovery phrase, and optional 2FA.',
+        },
+        {
+          title: 'Federated Chat that recovers',
+          alt: 'Kutup Messages conversation list and encrypted chat thread',
+          body: 'Direct and private-group messages, replies, reactions, edits, disappearing content, and lazy encrypted media. Continuous account-local backup restores protected history after browser loss.',
         },
       ],
     },
@@ -134,7 +139,7 @@ const en = {
       lead: 'Inspired by great open-source projects:',
     },
     cta: {
-      title: 'Run your own encrypted Drive today',
+      title: 'Run your own encrypted workspace today',
       // html: inline code
       body: 'Clone the repo, fill in a few secrets, and <code>docker compose up</code>. You’re the only one who can read your data.',
       getStarted: 'Get started',
@@ -146,12 +151,12 @@ const en = {
     meta: {
       title: 'Features',
       description:
-        'Drive, live notes & code, OnlyOffice documents, Excalidraw whiteboards, version history, federation, and a fully E2EE CLI — everything Kutup does.',
+        'Encrypted Drive, federated Chat, live collaboration, protected history recovery, and a fully E2EE CLI — everything Kutup does.',
     },
     hero: {
       eyebrow: 'Features',
       title: 'Everything encrypted, nothing compromised',
-      sub: 'Kutup pairs a zero-knowledge server with real-time collaboration across every file type. Here’s how each piece works.',
+      sub: 'Kutup pairs client-side encryption with real-time collaboration and federated messaging. Here’s how each piece works.',
     },
     sections: [
       {
@@ -216,14 +221,24 @@ const en = {
           'Optional TOTP 2FA, and a presence color that follows you across editors and tabs.',
         ],
       },
+      {
+        eyebrow: 'Messages',
+        title: 'Federated Direct and private-group Chat',
+        alt: 'Kutup Messages workspace',
+        points: [
+          'Direct conversations and Note to Self use libsignal; private groups use RFC 9420 OpenMLS.',
+          'Replies, reactions, edits, deletions, receipts, disappearing messages, local search, encrypted attachments, previews, and voice notes are supported.',
+          'Always-on account-local E2EE backup restores verified display history and eligible media after total browser loss without restoring protocol sessions or pending sends.',
+        ],
+      },
     ],
     federation: {
       eyebrow: 'Federation',
       title: 'Share across servers without sharing trust',
       subtitle:
-        'Invite someone on a different Kutup instance to a folder. Both backends route ciphertext; neither ever sees plaintext.',
+        'Share Drive folders and exchange Chat messages across Kutup instances. Both backends route ciphertext; neither receives protected plaintext.',
       // html: inline code
-      body: 'Federation invite links are built from each instance’s public <code>SERVER_URL</code>. Cross-server collaboration uses the same per-frame AEAD envelope and Ed25519 signatures as local editing — the encryption boundary doesn’t move just because a second server is involved.',
+      body: 'Drive and Chat share one authenticated federation identity, peer policy, retry pipeline, and audit surface. Feature-specific encrypted payloads remain separate, and the encryption boundary doesn’t move when a second server is involved.',
     },
     cli: {
       eyebrow: 'Command line',
@@ -232,7 +247,7 @@ const en = {
         'kutup is a Rust CLI for register, login, ls, upload, download, sync, share, versions, devices, and 2FA — all end-to-end encrypted. The server only ever sees ciphertext.',
       install: 'Build from source (Rust ≥ 1.91)',
       installNote:
-        'Tagged release binaries (Linux / macOS / Windows; amd64 + arm64) are published on GitHub Releases.',
+        'No public binary release exists yet. Tagged CLI releases are configured for Linux x86-64/ARM64, macOS Intel/Apple Silicon, and Windows x86-64.',
       workflows: 'Common workflows',
       standoutTitle: 'The standout: > 2 GB uploads',
       // html: inline code
@@ -249,34 +264,34 @@ const en = {
     meta: {
       title: 'Download',
       description:
-        'Get Kutup for desktop (macOS, Windows, Linux), mobile (iOS, Android), or the command line. All clients are end-to-end encrypted.',
+        'Use Kutup on the web or build the pre-release desktop shell and CLI from source. Native iOS and Android apps remain in development.',
     },
     hero: {
       eyebrow: 'Download',
-      title: 'Get Kutup on every device',
-      sub: 'Web, desktop, mobile, and a full CLI — every client encrypts end-to-end before anything touches the network. You’ll point each one at your own Kutup server.',
-      badge: 'Pre-release — binaries are published on GitHub Releases',
+      title: 'Choose how you use Kutup',
+      sub: 'The responsive web app is the complete product surface today. Desktop and CLI source are available; dedicated native mobile apps are not release-ready.',
+      badge: 'Pre-production — no public binary release yet',
     },
     desktop: {
       eyebrow: 'Desktop app',
       titleKnown: 'Recommended for {os}',
       titleUnknown: 'Download the desktop app',
-      body: 'Native shell built with Tauri 2 — macOS, Windows, and Linux (amd64 & arm64), with auto-updates and OS keychain support. Builds are published on GitHub Releases.',
+      body: 'The implemented Tauri 2 shell targets macOS, Windows, and Linux and stores session material in the OS keychain. Build it from source while signing, packaging, and first-release acceptance remain open.',
       downloadFor: 'Download for {os}',
       goToReleases: 'Go to Releases',
       preRelease:
-        'Pre-release — desktop v1 ships without in-app office-doc editing (open office files in the browser app). Builds aren’t code-signed yet, so macOS Gatekeeper / Windows SmartScreen may warn on first launch.',
+        'Pre-release source build — no public desktop release exists yet. Office documents open in the web app, and current local builds are unsigned.',
     },
     mobile: {
       eyebrow: 'Mobile',
       title: 'iOS & Android',
-      body: 'Native mobile builds via Tauri. iOS persists your session in the keychain. Distribution is in progress — track availability on GitHub Releases.',
-      cta: 'Check Releases ↗',
+      body: 'Dedicated native iOS and Android apps are active work in progress in separate repositories. They are not ready for installation or production use; retained Tauri-mobile targets are experimental.',
+      cta: 'View development status ↗',
     },
     web: {
       eyebrow: 'Web',
       title: 'Use it in the browser',
-      body: 'The full web app — including office-document editing — ships with every self-hosted instance. Stand up your own server and open it in any modern browser.',
+      body: 'The complete responsive app — Drive, collaboration, Office editing, federated Chat, and automatic protected-history recovery — ships with every self-hosted instance.',
       cta: 'Self-hosting guide',
     },
     cli: {
@@ -287,7 +302,7 @@ const en = {
       fromSource: 'Build from source (Rust ≥ 1.91)',
       // html: contains the releases link
       binaryNote:
-        'Prefer a binary? Tagged builds for Linux / macOS / Windows (amd64 + arm64) are on <a href="{releases}" target="_blank" rel="noopener noreferrer">GitHub Releases ↗</a>.',
+        'No public binary exists yet. The configured release matrix will publish Linux x86-64/ARM64, macOS Intel/Apple Silicon, and Windows x86-64 builds to <a href="{releases}" target="_blank" rel="noopener noreferrer">GitHub Releases ↗</a> after the first reviewed tag.',
     },
   },
 
@@ -321,7 +336,7 @@ const en = {
           'Edit <code>.env</code> and fill in every value with strong secrets:',
         // html: inline code
         s3Note:
-          'The S3 secret in <code>seaweedfs-s3.json</code> must match <code>S3_SECRET_KEY</code>.',
+          'Compose injects the S3 credentials into SeaweedFS and the backend; there is no second credential file to edit.',
       },
       start: {
         title: '2. Start the stack',
@@ -339,7 +354,7 @@ const en = {
         title: '4. Add TLS',
         // html: inline code
         intro:
-          'The bundled Nginx listens on port 80. Issue a certificate with Certbot, drop <code>fullchain.pem</code> and <code>privkey.pem</code> into <code>nginx/certs/</code>, add a 443 server block, and reload:',
+          'The bundled Nginx already requires TLS. Issue a certificate, place <code>fullchain.pem</code> and <code>privkey.pem</code> in <code>nginx/certs/</code>, and restart or reload Nginx:',
       },
     },
     operating: {
@@ -360,12 +375,12 @@ const en = {
         },
         {
           title: 'Hardening',
-          body: 'Change all <code>.env</code> defaults, expose only 80/443, and generate <code>JWT_SECRET</code> with <code>openssl rand -hex 64</code>. The bootstrap account is a protected break-glass admin — give it a strong password.',
+          body: 'Change every secret, expose only the public TLS edge, and generate <code>JWT_SECRET</code> with <code>openssl rand -hex 64</code>. Keep the backend unreachable except through Nginx and protect the break-glass admin.',
         },
       ],
       // html: contains the docs link
       docsNote:
-        'For OnlyOffice setup, lifecycle/versioning config, federation, and the full reference, see the <a href="{docs}" target="_blank" rel="noopener noreferrer">documentation ↗</a>.',
+        'Office editing works in the default Compose build without DocumentServer or manual installation. For durable SeaweedFS metadata, retention, quotas, federation, and backup/restore requirements, see the <a href="{docs}" target="_blank" rel="noopener noreferrer">documentation ↗</a>.',
     },
     cta: {
       title: 'Already running Kutup?',
@@ -384,7 +399,7 @@ const en = {
     hero: {
       eyebrow: 'Public instances',
       title: 'Find a Kutup server to join',
-      sub: 'Because Kutup is end-to-end encrypted, even an instance you don’t operate can’t read your files. Pick a community-run server, or run your own for full control.',
+      sub: 'Because Kutup encrypts protected content on your device, an instance you don’t operate cannot read your files or messages. Pick a community-run server, or run your own for full control.',
     },
     trust: {
       title: 'A note on trust',

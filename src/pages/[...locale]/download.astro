@@ -50,7 +50,7 @@ const t = getDict(locale)
         <h3 class="mt-2 text-2xl font-bold text-fg">{t.download.mobile.title}</h3>
         <p class="mt-2 text-sm text-muted">{t.download.mobile.body}</p>
         <a
-          href={LINKS.releases}
+          href={`${LINKS.docs}/guides/mobile/`}
           target="_blank"
           rel="noopener noreferrer"
           class="mt-5 inline-flex items-center justify-center rounded-lg border border-border bg-surface-2 px-5 py-2.5 text-sm font-medium text-fg transition-colors hover:border-ice/60 hover:text-ice"
@@ -88,7 +88,7 @@ const t = getDict(locale)
             lang="sh"
             copyLabel={t.copy.label}
             copiedLabel={t.copy.copied}
-            code={`git clone https://github.com/kutupbulut/kutup.git
+            code={`git clone https://github.com/kutupbt/kutup.git
 cd kutup
 cargo build --release -p kutup-cli
 install -m755 target/release/kutup ~/.local/bin/kutup`}

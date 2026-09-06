@@ -1,5 +1,5 @@
-# Cloudflare Pages headers. Applied to matching response paths.
-# https://developers.cloudflare.com/pages/configuration/headers/
+# Cloudflare Workers static-asset headers. Applied to matching response paths.
+# https://developers.cloudflare.com/workers/static-assets/headers/
 
 /*
   X-Content-Type-Options: nosniff
