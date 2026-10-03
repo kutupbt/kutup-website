@@ -50,6 +50,20 @@ The three-diamond logo (`src/components/KutupLogo.astro`, `public/favicon.svg`)
 and the Kutup name are brand assets — not granted by the source AGPL license.
 Do not recolor or modify them. See the main repo's `TRADEMARK.md`.
 
+## Federation discovery for the public instance
+
+Accounts on the public Kutup instance are `name@kutup.dev`, so other Kutup
+servers look for that server's discovery document on this domain. The
+Worker (`worker/index.js`) passes two paths through to the server at
+`KUTUP_SERVER_ORIGIN` (`wrangler.toml`):
+
+- `/.well-known/kutup/federation.json`
+- `/.well-known/kutup/federation/identity/<n>.json`
+
+Everything else is static. It is a pass-through rather than a redirect
+because federating servers do not follow redirects and the document is
+signed with a validity window.
+
 ## Deploy (Cloudflare Workers)
 
 **Recommended — connect the Git repo** to Workers Builds in the Cloudflare
